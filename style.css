@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{--bg:#070a0f;--panel:#0d121a;--line:#1d2632;--text:#f4f7fb;--muted:#8995a5;--accent:#b9ff4a;--accent2:#74e6ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",system-ui,sans-serif}.bg{position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 0,rgba(185,255,74,.08),transparent 32%),radial-gradient(circle at 90% 40%,rgba(116,230,255,.05),transparent 25%)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:auto;padding:0 22px;border-bottom:1px solid rgba(255,255,255,.05)}.brand{font:700 24px "Space Grotesk";color:white;text-decoration:none}.brand span{color:var(--accent)}.brand b{font-size:13px;margin-left:4px}.nav nav{display:flex;gap:30px}.nav nav a{color:#aab4c2;text-decoration:none;font-size:14px}.ghost{background:transparent;color:white;border:1px solid #2a3544;padding:10px 15px;border-radius:10px}.hero{max-width:980px;margin:0 auto;padding:100px 22px 72px;text-align:center}.eyebrow,.kicker{font-size:11px;letter-spacing:.18em;color:var(--accent);font-weight:700}.hero h1{font:700 clamp(54px,9vw,94px)/.94 "Space Grotesk";letter-spacing:-.065em;margin:18px 0}.hero h1 em{font-style:normal;color:var(--accent)}.heroText{max-width:620px;margin:0 auto 30px;color:var(--muted);font-size:18px;line-height:1.6}.searchbar{display:flex;align-items:center;max-width:760px;margin:auto;padding:6px 7px 6px 17px;background:#10161f;border:1px solid #293444;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.25)}.searchbar span{font-size:27px;color:#697688}.searchbar input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:white;font-size:16px;padding:13px}.searchbar button{border:0;border-radius:11px;padding:14px 18px;background:var(--accent);color:#0a1004;font-weight:800}.quick{margin-top:16px;color:#687487;font-size:13px}.quick button{background:none;border:0;color:#9ba7b8;cursor:pointer;margin-left:9px}.dashboard,.how,.featureGrid{max-width:1120px;margin:auto;padding:55px 22px}.sectionHead{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px}.sectionHead h2,.how h2{font:600 38px "Space Grotesk";margin:8px 0}.updated{font-size:12px;color:#697688}.card{background:linear-gradient(145deg,#0e141d,#0b1017);border:1px solid var(--line);border-radius:20px}.empty{text-align:center;padding:60px 20px}.emptyIcon{font-size:40px;color:var(--accent)}.empty p,.feature p,.steps p{color:var(--muted);line-height:1.6}.productCard{padding:22px}.productTop{display:flex;justify-content:space-between;gap:20px}.productTitle{font:600 24px "Space Grotesk";margin:0 0 7px}.best{display:inline-flex;gap:8px;align-items:center;background:rgba(185,255,74,.1);color:var(--accent);border:1px solid rgba(185,255,74,.25);padding:7px 10px;border-radius:99px;font-size:12px;font-weight:700}.stores{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.store{padding:18px;border:1px solid #202b39;border-radius:15px;background:#0b1118}.store.bestStore{border-color:rgba(185,255,74,.45)}.storeName{font-weight:700}.price{font:700 30px "Space Grotesk";margin:12px 0 5px}.storeMeta{color:#8793a3;font-size:13px}.store a{display:inline-block;margin-top:14px;color:var(--accent2);text-decoration:none;font-size:13px}.historyBox{margin-top:14px;padding:16px;border-top:1px solid #202a36;color:#8995a5;font-size:13px}.featureGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{padding:25px}.feature .icon{font-size:27px;margin-bottom:25px;color:var(--accent)}.feature h3{font:600 24px "Space Grotesk";margin:10px 0}.how{padding-top:80px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-top:28px}.steps>div{padding:25px;border-right:1px solid var(--line)}.steps>div:last-child{border-right:0}.steps b{color:var(--accent);font-size:12px}.steps h3{font:600 20px "Space Grotesk";margin-bottom:0}footer{max-width:1120px;margin:50px auto 0;padding:25px 22px 35px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#687487;font-size:12px}
+/* ---------- Responsive system ---------- */
+@media (max-width: 1024px) {
+  .nav{padding:0 20px}
+  .hero{padding:78px 24px 60px}
+  .dashboard,.how,.featureGrid{padding-left:24px;padding-right:24px}
+  .featureGrid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width: 760px) {
+  .nav{height:68px}
+  .nav nav{display:none}
+  .ghost{padding:9px 12px;font-size:12px}
+
+  .hero{padding:58px 18px 48px}
+  .hero h1{font-size:clamp(48px,15vw,72px);letter-spacing:-.055em}
+  .heroText{font-size:16px;line-height:1.55}
+  .searchbar{display:grid;grid-template-columns:auto 1fr;gap:0;padding:6px}
+  .searchbar span{padding-left:10px}
+  .searchbar input{width:100%;font-size:16px;padding:12px}
+  .searchbar button{grid-column:1/-1;width:100%;margin-top:4px}
+  .quick{line-height:2}
+  .quick button{margin:0 4px}
+
+  .dashboard,.how,.featureGrid{padding:42px 18px}
+  .sectionHead{align-items:flex-start;flex-direction:column;gap:7px}
+  .sectionHead h2,.how h2{font-size:32px}
+
+  .productCard{padding:16px}
+  .productTop{flex-direction:column;gap:12px}
+  .productTitle{font-size:20px;line-height:1.25}
+  .best{width:max-content}
+  .stores{grid-template-columns:1fr}
+  .store{padding:16px}
+  .price{font-size:27px}
+  .historyBox{line-height:1.55}
+
+  .featureGrid{grid-template-columns:1fr}
+  .feature{padding:21px}
+  .how{padding-top:48px}
+  .steps{grid-template-columns:1fr}
+  .steps>div{border-right:0;border-bottom:1px solid var(--line);padding:22px 4px}
+  .steps>div:last-child{border-bottom:0}
+
+  footer{margin-top:28px;padding:22px 18px 28px;display:flex;flex-direction:column;gap:8px}
+}
+
+@media (max-width: 420px) {
+  .nav{padding:0 14px}
+  .brand{font-size:21px}
+  .hero{padding:48px 14px 40px}
+  .hero h1{font-size:47px}
+  .heroText{font-size:15px}
+  .dashboard,.how,.featureGrid{padding-left:14px;padding-right:14px}
+  .productCard{border-radius:16px}
+  .productTitle{font-size:18px}
+  .kicker{font-size:10px}
+  .updated{font-size:11px}
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .ghost,.searchbar button,.quick button,.store a{transition:transform .18s ease,opacity .18s ease}
+  .ghost:hover{transform:translateY(-1px)}
+  .searchbar button:hover{transform:translateY(-1px)}
+  .quick button:hover,.store a:hover{opacity:.8}
+}
+.providerNote{margin:0 0 12px;padding:10px 14px;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#9aa4b2;font-size:13px;background:rgba(255,255,255,.025)}

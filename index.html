@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PriceWise — Shop smarter</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="bg"></div>
+<header class="nav">
+  <a class="brand" href="/">Price<span>Wise</span><b>✦</b></a>
+  <nav><a href="#compare">Compare</a><a href="#history">Price History</a><a href="#alerts">Alerts</a></nav>
+  <button class="ghost" id="extensionBtn">Get Extension</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="eyebrow">YOUR PERSONAL SHOPPING COPILOT</div>
+  <h1>Never overpay<br><em>again.</em></h1>
+  <p class="heroText">Compare real prices, understand the price history, and know when it's actually worth buying.</p>
+  <form id="searchForm" class="searchbar">
+    <span>⌕</span><input id="query" placeholder="Search any product — mouse, GPU, phone..." autocomplete="off">
+    <button>Compare prices <b>→</b></button>
+  </form>
+  <div class="quick"><span>Try:</span><button data-q="Kreo Harpy mouse">Kreo Harpy mouse</button><button data-q="RTX 5090">RTX 5090</button><button data-q="wireless mouse">wireless mouse</button></div>
+</section>
+
+<section id="compare" class="dashboard">
+  <div class="sectionHead"><div><span class="kicker">LIVE COMPARISON</span><h2>Price radar</h2></div><span id="updated" class="updated">Waiting for a search</span></div>
+  <div id="results">
+    <div class="empty card"><div class="emptyIcon">⌁</div><h3>Search for a product</h3><p>PriceWise will compare configured store data and highlight the cheapest option.</p></div>
+  </div>
+</section>
+
+<section id="history" class="featureGrid">
+  <article class="feature card"><div class="icon">↗</div><span class="kicker">HISTORY</span><h3>Know the real deal.</h3><p>Track observed prices over time and see whether today's price is actually good.</p></article>
+  <article class="feature card"><div class="icon">⌁</div><span class="kicker">SMART BUY</span><h3>Buy now or wait.</h3><p>A simple signal based on current price versus your collected history.</p></article>
+  <article id="alerts" class="feature card"><div class="icon">♢</div><span class="kicker">ALERTS</span><h3>Your price. Your rules.</h3><p>Set a target and let the backend notify you when a real observed price reaches it.</p></article>
+</section>
+
+<section class="how">
+  <span class="kicker">HOW IT WORKS</span>
+  <h2>One search. Less guesswork.</h2>
+  <div class="steps"><div><b>01</b><h3>Search</h3><p>Enter a product or use the extension while shopping.</p></div><div><b>02</b><h3>Compare</h3><p>PriceWise asks configured authorized data providers for current information.</p></div><div><b>03</b><h3>Decide</h3><p>See the best observed price, history, and buy/wait signal.</p></div></div>
+</section>
+</main>
+<footer><span>PriceWise ✦</span><span>Real data only. No invented prices.</span></footer>
+<script src="/app.js"></script>
+</body></html>
