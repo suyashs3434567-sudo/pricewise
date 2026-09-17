@@ -1,4 +1,4 @@
-PRICEWISE — Cloudflare Workers full-stack deployment package
+PRICEWISE — Cloudflare Workers full-stack deployment package.
 
 This package combines the PriceWise frontend with a Cloudflare Worker API.
 
