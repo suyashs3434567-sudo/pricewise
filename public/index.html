@@ -1,50 +1,106 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PriceWise — Shop smarter</title>
+<meta name="theme-color" content="#080817">
+<title>PriceWise V2</title>
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<div class="bg"></div>
-<header class="nav">
-  <a class="brand" href="/">Price<span>Wise</span><b>✦</b></a>
-  <nav><a href="#compare">Compare</a><a href="#history">Price History</a><a href="#alerts">Alerts</a></nav>
-  <button class="ghost" id="extensionBtn">Get Extension</button>
+<div class="orb o1"></div><div class="orb o2"></div>
+
+<header>
+<a class="brand" href="/"><b>PW</b> PriceWise <small>V2</small></a>
+<nav><a href="#radar">Radar</a><a href="#battle">Battle</a><a href="#features">Features</a></nav>
+<button id="theme">☼</button>
 </header>
 
 <main>
 <section class="hero">
-  <div class="eyebrow">YOUR PERSONAL SHOPPING COPILOT</div>
-  <h1>Never overpay<br><em>again.</em></h1>
-  <p class="heroText">Compare real prices, understand the price history, and know when it's actually worth buying.</p>
-  <form id="searchForm" class="searchbar">
-    <span>⌕</span><input id="query" placeholder="Search any product — mouse, GPU, phone..." autocomplete="off">
-    <button>Compare prices <b>→</b></button>
-  </form>
-  <div class="quick"><span>Try:</span><button data-q="Kreo Harpy mouse">Kreo Harpy mouse</button><button data-q="RTX 5090">RTX 5090</button><button data-q="wireless mouse">wireless mouse</button></div>
+<label>✦ SMART SHOPPING, REIMAGINED</label>
+<h1>Find the <span>right price.</span><br>Not just a price.</h1>
+<p>Compare real listings, understand the deal, then shop directly.</p>
+
+<form id="searchForm">
+<i>⌕</i>
+<input id="q" placeholder="Search any product…">
+<button>Compare ↗</button>
+</form>
+
+<div class="quick">
+<button data-q="wireless headphones">🎧 Headphones</button>
+<button data-q="gaming mouse">🖱️ Gaming Mouse</button>
+<button data-q="smartphone">📱 Smartphone</button>
+<button data-q="laptop">💻 Laptop</button>
+</div>
 </section>
 
-<section id="compare" class="dashboard">
-  <div class="sectionHead"><div><span class="kicker">LIVE COMPARISON</span><h2>Price radar</h2></div><span id="updated" class="updated">Waiting for a search</span></div>
-  <div id="results">
-    <div class="empty card"><div class="emptyIcon">⌁</div><h3>Search for a product</h3><p>PriceWise will compare configured store data and highlight the cheapest option.</p></div>
-  </div>
+<section id="radar" class="panel">
+<div class="head">
+<div><small>01 / PRICE RADAR</small><h2>Decode your deal.</h2></div>
+<span id="status">Waiting for a search</span>
+</div>
+
+<div class="radar">
+<div class="score">
+<div class="ring"><strong id="score">—</strong><small>SCORE</small></div>
+<h3 id="scoreText">Search a product</h3>
+<p id="scoreWhy">Real data only. No invented scores.</p>
+</div>
+
+<div class="signal">
+<div class="signalhead">DEAL SIGNAL <b id="signal">—</b></div>
+<div class="meter"><i id="meter"></i></div>
+<p>Current price <b id="current">—</b></p>
+<p>Historical low <b id="low">Not enough data</b></p>
+<p>Potential saving <b id="saving">—</b></p>
+</div>
+</div>
 </section>
 
-<section id="history" class="featureGrid">
-  <article class="feature card"><div class="icon">↗</div><span class="kicker">HISTORY</span><h3>Know the real deal.</h3><p>Track observed prices over time and see whether today's price is actually good.</p></article>
-  <article class="feature card"><div class="icon">⌁</div><span class="kicker">SMART BUY</span><h3>Buy now or wait.</h3><p>A simple signal based on current price versus your collected history.</p></article>
-  <article id="alerts" class="feature card"><div class="icon">♢</div><span class="kicker">ALERTS</span><h3>Your price. Your rules.</h3><p>Set a target and let the backend notify you when a real observed price reaches it.</p></article>
+<section id="battle" class="panel">
+<div class="head">
+<div><small>02 / STORE BATTLE</small><h2>Who wins?</h2></div>
+</div>
+
+<div id="results">
+<div class="empty">
+⚡
+<h3>Ready to compare</h3>
+<p>Search above for real Amazon and Flipkart listings.</p>
+</div>
+</div>
 </section>
 
-<section class="how">
-  <span class="kicker">HOW IT WORKS</span>
-  <h2>One search. Less guesswork.</h2>
-  <div class="steps"><div><b>01</b><h3>Search</h3><p>Enter a product or use the extension while shopping.</p></div><div><b>02</b><h3>Compare</h3><p>PriceWise asks configured authorized data providers for current information.</p></div><div><b>03</b><h3>Decide</h3><p>See the best observed price, history, and buy/wait signal.</p></div></div>
+<section id="features" class="features">
+<article class="big">
+🧩<small>VARIANT GUARD</small>
+<h2>Compare the same variant.</h2>
+<p>Catch RAM, storage, colour and model differences before comparing.</p>
+</article>
+
+<article>
+🕵️<small>PRICE TRAP</small>
+<h3>Discount or illusion?</h3>
+<p>Compare against observed history.</p>
+</article>
+
+<article>
+🎯<small>BUY TARGET</small>
+<h3>Know your target.</h3>
+<p>See when waiting may make sense.</p>
+</article>
+
+<article>
+💡<small>EXPLAIN</small>
+<h3>Numbers → decision.</h3>
+<p>Turn data into an easy shopping summary.</p>
+</article>
 </section>
 </main>
-<footer><span>PriceWise ✦</span><span>Real data only. No invented prices.</span></footer>
+
+<footer>PriceWise V2 · Real data only · No invented prices</footer>
 <script src="/app.js"></script>
-</body></html>
+</body>
+</html>
